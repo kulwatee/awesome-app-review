@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from "app/services/post.service";
 
 @Component({
   selector: 'app-post-facebook',
@@ -9,11 +10,14 @@ export class FacebookComponent implements OnInit {
 
   posts: any[] = [];
 
-  constructor() { }
+  constructor(private _postService: PostService) { }
 
   ngOnInit(): void {
-    this.posts.push({});
-    this.posts.push({});
+
+    this._postService.posts$.subscribe(posts => {
+      this.posts = posts;
+    });
+
   }
 
 }

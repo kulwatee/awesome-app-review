@@ -48,6 +48,7 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { FacebookComponent } from './components/posts/facebook/facebook.component';
+import { PostChartComponent } from "app/components/cards/posts-chart/posts-chart.component";
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { FacebookComponent } from './components/posts/facebook/facebook.componen
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    PostChartComponent,
     FacebookComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
