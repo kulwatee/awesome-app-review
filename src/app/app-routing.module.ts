@@ -18,6 +18,9 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 // no layouts views
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 
 const routes: Routes = [
   // admin views
@@ -46,11 +49,16 @@ const routes: Routes = [
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },
   //{ path: "", component: IndexComponent },
-  { path: "**", redirectTo: "admin/dashboard", pathMatch: "full" },
+  { path: "**", redirectTo: "auth/login", pathMatch: "full" },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

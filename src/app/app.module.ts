@@ -49,6 +49,7 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { FacebookComponent } from './components/posts/facebook/facebook.component';
 import { PostChartComponent } from "app/components/cards/posts-chart/posts-chart.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -89,7 +90,12 @@ import { PostChartComponent } from "app/components/cards/posts-chart/posts-chart
     PostChartComponent,
     FacebookComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
