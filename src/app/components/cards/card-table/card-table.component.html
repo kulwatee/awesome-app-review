@@ -1,0 +1,132 @@
+<div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'">
+  <div class="rounded-t mb-0 px-4 py-3 border-0">
+    <div class="flex flex-wrap items-center">
+      <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+        <h3 class="font-semibold text-lg" [ngClass]="color === 'light' ? 'text-slate-700' : 'text-white'">
+          Card Tables
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="block w-full overflow-x-auto">
+    <!-- Projects table -->
+
+    <!-- หัวข้อ -->
+    <table class="items-center w-full bg-transparent border-collapse">
+      <thead>
+        <tr>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">Profile</th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Author
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            CreatedTime
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            Description
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            MensionCount
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">
+            CommentCount
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-slate-50 text-slate-500 border-slate-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            ">shareCount</th>
+          
+
+           
+         
+
+        </tr>
+      </thead>
+
+      <!--body-->
+      <tbody *ngFor="let post of posts">
+        <tr> 
+           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <div class="flex justify-center">
+               <img [src]="post.picture" alt="..."
+               class="w-10 h-10 rounded-full border-2 border-slate-50 shadow -ml-4  "/>
+            </div>
+          
+          </td>
+          <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-slate-600' : 'text-white'">
+             {{post.author}}
+            </span> 
+          </th>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{post.createdTime}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{post.description}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{post.mensionCount}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{post.commentCount}}
+          </td>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{post.shareCount}}
+          </td>
+          
+        
+
+       
+
+          
+      
+          
+
+      </tbody>
+    </table>
+
+
+
+  </div>
+</div>
